@@ -101,7 +101,6 @@ $(document).ready(function() {
     }
     
     $('#seznam-uporabnikov div').click(function() {
-      //document.querySelector('#poslji-sporocilo').value = '/zasebno ' + $(this).text() + ' ';
       $('#poslji-sporocilo')[0].value = '/zasebno ' + $(this).text() + ' ';
       $('#poslji-sporocilo').focus();
     });
