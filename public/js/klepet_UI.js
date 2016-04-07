@@ -13,8 +13,6 @@ function divElementSlike(sporocilo) {
   var dodaneSlike = '';
   for (var i in besede) {
     if(new RegExp('(http|https):\/\/.*\.(jpg|png|gif)').test(besede[i])) {
-    //if((besede[i].match('^http://') || besede[i].match('^https://')) && (besede[i].match('.jpg$') || besede[i].match('.png$') || besede[i].match('.gif$'))) {
-        //console.log(besede[i]);
         dodaneSlike += '<img src="' + besede[i] + '" width="200px" height="auto"></img><br />';
     }
   }
