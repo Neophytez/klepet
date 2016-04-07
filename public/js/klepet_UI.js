@@ -142,6 +142,15 @@ $(document).ready(function() {
     });
   });
 
+  socket.on('dregljaj', function() {
+    var rumbleDelay = 1500;
+    $('#vsebina').jrumble();
+    $('#vsebina').trigger('startRumble');
+    setTimeout(function() {
+      $('#vsebina').trigger('stopRumble');
+    }, rumbleDelay);
+  });
+
   setInterval(function() {
     socket.emit('kanali');
     socket.emit('uporabniki', {kanal: trenutniKanal});
