@@ -89,7 +89,9 @@ $(document).ready(function() {
 
   socket.on('sporocilo', function (sporocilo) {
     var novElement = divElementEnostavniTekst(sporocilo.besedilo);
+    var slike = divElementSlike(sporocilo.besedilo);
     $('#sporocila').append(novElement);
+    $('#sporocila').append(slike);
   });
   
   socket.on('kanali', function(kanali) {
