@@ -49,11 +49,8 @@ function procesirajVnosUporabnika(klepetApp, socket) {
     sporocilo = filtirirajVulgarneBesede(sporocilo);
     klepetApp.posljiSporocilo(trenutniKanal, sporocilo);
     $('#sporocila').append(divElementEnostavniTekst(sporocilo));
-<<<<<<< HEAD
     $('#sporocila').append(divElementSlike(sporocilo));
-=======
     $('#sporocila').append(divElementYoutube(sporocilo));
->>>>>>> youtube
     $('#sporocila').scrollTop($('#sporocila').prop('scrollHeight'));
   }
 
@@ -103,15 +100,12 @@ $(document).ready(function() {
 
   socket.on('sporocilo', function (sporocilo) {
     var novElement = divElementEnostavniTekst(sporocilo.besedilo);
-<<<<<<< HEAD
     var slike = divElementSlike(sporocilo.besedilo);
     $('#sporocila').append(novElement);
     $('#sporocila').append(slike);
-=======
     var youtube = divElementYoutube(sporocilo.besedilo);
     $('#sporocila').append(novElement);
     $('#sporocila').append(youtube);
->>>>>>> youtube
   });
   
   socket.on('kanali', function(kanali) {
